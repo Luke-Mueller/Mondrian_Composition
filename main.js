@@ -1,12 +1,40 @@
-import colors from "./utils/colors.js";
-import setDimensions from "./utils/setDimensions.js";
-
 const html = document.querySelector("html");
 const body = document.querySelector("body");
 const canvas = document.querySelector("canvas");
+const colors = {
+  black: "#181a10",
+  blue: "#224271",
+  gray1: "#cad3db",
+  gray2: "#d3d6d4",
+  gray3: "#d0d0d9",
+  gray4: "#e4e3dd",
+  gray5: "#ced4d9",
+  gray6: "#d3d6d7",
+  gray7: "#bbbfc7",
+  gray8: "#c7cac9",
+  red1: "#bf412e",
+  yellow1: "#e3bc4a",
+  yellow2: "#e3bb51",
+};
+
+const setDimensions = () => {
+  const height = html.clientHeight,
+    width = html.clientWidth;
+
+  let measurement;
+  if (height < width) measurement = height;
+  else measurement = width;
+
+  body.style.height = `${(height * 0.9) / 10}rem`;
+  const dimensions = `${(measurement * 0.7) / 10}rem`;
+  canvas.style.height = dimensions;
+  canvas.style.width = dimensions;
+};
+
+window.onresize = setDimensions;
 
 window.onload = () => {
-  setDimensions(html, body, canvas);
+  setDimensions();
   const ctx = canvas.getContext("2d");
 
   // 1st box
@@ -114,7 +142,6 @@ window.onload = () => {
   ctx.stroke();
 };
 
-window.onresize = setDimensions.bind(this, html, body, canvas);
 
 // const img = document.createElement("img");
 // img.src = "assets/download.png";
