@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -7,10 +12,10 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-canvas {
-  border: 1px solid gray;
-}
+/* img {
+  position: absolute;
+  transform: scale(.37);
+  opacity: 0.5;
+} */
