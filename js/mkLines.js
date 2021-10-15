@@ -24,7 +24,7 @@ const mkLines = (ctx) => {
   ctx.beginPath();
   ctx.lineWidth = 6;
   ctx.strokeStyle = colors.black1;
-  mkLine(33, 18, 35.5, 146, ctx);
+  mkLine(35, 18, 35, 146, ctx);
   mkLine(71, 4, 71, 18, ctx);
   mkLine(111, 95, 112, 148, ctx);
   mkLine(186, 3, 187, 142.5, ctx);
